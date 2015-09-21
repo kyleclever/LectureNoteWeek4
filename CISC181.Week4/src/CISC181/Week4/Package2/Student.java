@@ -1,15 +1,21 @@
 package CISC181.Week4.Package2;
 
+import java.beans.Transient;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 @XmlRootElement
 public class Student extends Person {
-
+		
+	@XmlElement
+	private ArrayList<Course> Courses = new ArrayList<Course>();
+	
 	private String Major;
-	
-	
+
+	@XmlTransient
 	public String getMajor ( )
     {
         return this.Major;
@@ -41,4 +47,10 @@ public class Student extends Person {
 	{
 		super.PrintName();
 	}
+	
+	public void AddCourse(Course c)
+	{
+		this.Courses.add(c);
+	}
+
 }

@@ -27,6 +27,7 @@ public abstract class Person {
 	
 	private String email_address;
 
+	@XmlElement(name="First_Name")
 	public String getFirstName() {
 		return FirstName;
 	}

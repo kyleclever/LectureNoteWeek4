@@ -26,6 +26,12 @@ public class CMain {
 		Student stu = new Student("Bert", "Randall", "Gibbons", dBirthDate, "MIS", "214 Labrador Lane", "302-893-6889",
 				"bgibbons@udel.edu" );
 
+		Course c1 = new Course("CISC 181");
+		stu.AddCourse(c1);
+		Course c2 = new Course("CISC 260");
+		stu.AddCourse(c2);
+		
+		
 		stu.PrintName();
 		stu.PrintName(true);
 
